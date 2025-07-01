@@ -33,6 +33,7 @@ Before running the project, make sure you have the following installed:
 ### 1. Clone the Repository
 ```
 git clone https://github.com/WackyNoodles/CrashAnalytix.git
+cd CrashAnalytix
 ```
 
 ### 2. Frontend Setup
@@ -63,4 +64,4 @@ yarn run dev
 This will start the development server for the frontend. You can access the application in your browser at http://localhost:3000 (or whatever the specified port is).
 
 ## Testing
-There are some testing videos in lpr_vids and test_vids folder.
+There are some testing videos in `lpr_vids` and `test_vids` folder.
