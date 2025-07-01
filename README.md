@@ -46,7 +46,7 @@ Before running the project, make sure you have the following installed:
     cd backend
     pip install -r requirements.txt
 ```
-    Download the models from the provided Google Drive link and place them in the backend folder.
+Download the models from the provided Google Drive link and place them in the backend folder.
 
 ## Deployment
 ### 1. Deploy Backend
@@ -60,7 +60,7 @@ Before running the project, make sure you have the following installed:
     cd frontend
     yarn run dev
 ```
-    This will start the development server for the frontend. You can access the application in your browser at http://localhost:3000 (or whatever the specified port is).
+This will start the development server for the frontend. You can access the application in your browser at http://localhost:3000 (or whatever the specified port is).
 
 ## Testing
-    There are some testing videos in lpr_vids and test_vids folder.
+There are some testing videos in lpr_vids and test_vids folder.
