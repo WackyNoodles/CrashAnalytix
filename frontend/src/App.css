@@ -1,0 +1,245 @@
+/* Static Glass Container (no hover effects) */
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+.accident-title {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff6a6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Subtle shadow for legibility */
+    letter-spacing: 2px;
+    padding-bottom: 4px; /* Prevent clipping of descenders like 'y' */
+    line-height: 1.2;     /* Add breathing space for letters with tails */
+}
+
+/* Expanding Effect When Loading */
+.expanded-container {
+    min-height: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.animate-bounce {
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Default Background Image for all pages */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/bg1.jpg'); /* Default background */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.9;
+    animation: backgroundPan 20s linear infinite;
+}
+
+/* Specific background for detect page */
+.detect-page::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/bg.jpg'); /* New background for detect page */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.9;
+    animation: backgroundPan 20s linear infinite;
+}
+
+/* Hide default background when detect page class is present */
+body.detect-page::after {
+    background-image: url('./assets/bg.jpg'); /* Override default background */
+}
+
+
+.license-plate-page::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/bg2.jpg'); /* New background for detect page */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.9;
+    animation: backgroundPan 20s linear infinite;
+}
+
+/* Hide default background when detect page class is present */
+body.license-plate-page::after {
+    background-image: url('./assets/bg2.jpg'); /* Override default background */
+}
+
+
+/* Background Animation */
+@keyframes backgroundPan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* File Input Styling */
+.custom-file-input {
+    display: flex;
+    justify-content: center;
+    padding: 12px 24px;
+    background: rgba(34, 211, 238, 0.1);
+    border: 2px solid rgba(34, 211, 238, 0.2);
+    border-radius: 8px;
+    color: #a5f3fc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+.custom-file-input:hover {
+    background: rgba(34, 211, 238, 0.2);
+    border-color: rgba(34, 211, 238, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Glass Effect Container */
+.glass-container {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(34, 211, 238, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    transition: all 0.3s ease;
+}
+.glass-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(34, 211, 238, 0.2);
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.02);
+}
+button:active {
+    transform: scale(0.95);
+}
+
+/* Loading Animation */
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+.animate-spin {
+    animation: spin 1.5s linear infinite;
+}
+
+/* Pop-in Effect */
+@keyframes pop-in {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.animate-pop-in {
+    animation: pop-in 0.3s ease-out;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(to right, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Pulse Effect for Result */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.animate-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+    .w-64, .h-64 {
+        width: 10rem; /* Smaller animation size on mobile */
+        height: 10rem;
+    }
+}
+
+.glass-container-static {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(34, 211, 238, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Fix for video controls */
+video::-webkit-media-controls {
+  z-index: 2;
+}
+
+video::-webkit-media-controls-panel {
+  z-index: 3;
+}
+
+video {
+  z-index: 1;
+  position: relative;
+}
+
+/* Loading bar animation */
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading-bar {
+  animation: loading 5s linear forwards;
+}
+
+/* Accident details page styles */
+.accident-report-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Severity score gradient */
+.severity-high {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+}
+
+.severity-medium {
+  background: linear-gradient(90deg, #feb47b, #ffda79);
+}
+
+.severity-low {
+  background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+}
