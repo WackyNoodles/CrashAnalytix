@@ -1,0 +1,11 @@
+easyocr==1.7.2
+Flask==3.1.1
+Flask_Cors==5.0.0
+numpy==2.3.1
+opencv_python==4.11.0.86
+opencv_python_headless==4.11.0.86
+pandas==2.3.0
+Pillow==11.3.0
+pymongo==4.13.2
+torch==2.7.0+cu126
+ultralytics==8.3.155
