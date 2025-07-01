@@ -32,33 +32,33 @@ Before running the project, make sure you have the following installed:
 
 ### 1. Clone the Repository
 ```
-    git clone https://github.com/WackyNoodles/CrashAnalytix.git
+git clone https://github.com/WackyNoodles/CrashAnalytix.git
 ```
 
 ### 2. Frontend Setup
 ```
-    cd frontend
-    yarn install
+cd frontend
+yarn install
 ```
 
 ### 3. Backend Setup
 ```
-    cd backend
-    pip install -r requirements.txt
+cd backend
+pip install -r requirements.txt
 ```
 Download the models from the provided Google Drive link and place them in the backend folder.
 
 ## Deployment
 ### 1. Deploy Backend
 ```
-    cd backend
-    python app.py
+cd backend
+python app.py
 ```
 
 ### 2. Deploy Frontend
 ```
-    cd frontend
-    yarn run dev
+cd frontend
+yarn run dev
 ```
 This will start the development server for the frontend. You can access the application in your browser at http://localhost:3000 (or whatever the specified port is).
 
